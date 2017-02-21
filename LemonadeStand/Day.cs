@@ -8,5 +8,15 @@ namespace LemonadeStand
 {
     class Day
     {
+        //member variables
+        public int day = 1;
+
+        //constructor
+
+        //methods
+        public void DisplayDay()
+        {
+            Console.WriteLine("Day {0}", day++);
+        }
     }
 }
