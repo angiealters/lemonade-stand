@@ -12,6 +12,7 @@ namespace LemonadeStand
         Rules rules;
         Weather forecast;
         Day currentDay;
+        Store store;
     
 
         //constructor
@@ -20,6 +21,7 @@ namespace LemonadeStand
             rules = new Rules();
             forecast = new Weather();
             currentDay = new Day();
+            store = new Store();
         }
 
         //methods
@@ -31,6 +33,7 @@ namespace LemonadeStand
             {
                 currentDay.DisplayDay();
                 forecast.DailyWeather();
+                store.GoToStore();
             }
         }
     }

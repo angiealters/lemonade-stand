@@ -21,6 +21,7 @@ namespace LemonadeStand
                 + "\n You can control what amount of each ingredient goes into your lemonade."
                 + "\n Weather will have an impact on your sales, so plan accordingly as far as"
                 + "\n the amount of ingredients you purchase, and the price you charge per cup."
+                + "\n You have $20 to start with."
                 + "\n Good luck!");
         }
     }
