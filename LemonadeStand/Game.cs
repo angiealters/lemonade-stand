@@ -13,6 +13,7 @@ namespace LemonadeStand
         Weather forecast;
         Day currentDay;
         Store store;
+        Recipe recipe;
     
 
         //constructor
@@ -22,6 +23,7 @@ namespace LemonadeStand
             forecast = new Weather();
             currentDay = new Day();
             store = new Store();
+            recipe = new Recipe();
         }
 
         //methods
@@ -34,6 +36,7 @@ namespace LemonadeStand
                 currentDay.DisplayDay();
                 forecast.DailyWeather();
                 store.GoToStore();
+                recipe.CreateRecipe();
             }
         }
     }

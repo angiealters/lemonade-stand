@@ -9,10 +9,10 @@ namespace LemonadeStand
     class Inventory
     {
         //member variables
-        public double cups;
-        public double lemons;
-        public double sugar;
-        public double ice;
+        public int cups;
+        public int lemons;
+        public int sugar;
+        public int ice;
 
         //constructor
         public Inventory()

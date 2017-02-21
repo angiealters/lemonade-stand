@@ -99,9 +99,9 @@ namespace LemonadeStand
         private void PurchaseSugar()
         {
             Console.WriteLine("Choose how many cups of sugar you would like to purchase from the following options:"
-                + "\n 10 cups for $1.00"
-                + "\n 30 cups for $2.75"
-                + "\n 50 cups for $4.50"
+                + "\n 10 cups of sugar for $1.00"
+                + "\n 30 cups of sugar for $2.75"
+                + "\n 50 cups of sugar for $4.50"
                 + "\n Enter the number of cups of sugar, or enter '0' to skip sugar.");
             string sugarSelection = Console.ReadLine();
 
