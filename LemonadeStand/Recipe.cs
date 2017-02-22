@@ -23,10 +23,10 @@ namespace LemonadeStand
         //methods
         public void CreateRecipe()
         {
-            this.lemons = GetAmountOfLemons();
-            this.sugar = GetAmountOfSugar();
-            this.ice = GetAmountOfIce();
-            this.price = GetPricePerCup();            
+            lemons = GetAmountOfLemons();
+            sugar = GetAmountOfSugar();
+            ice = GetAmountOfIce();
+            price = GetPricePerCup();            
         }
         private int GetAmountOfLemons()
         {

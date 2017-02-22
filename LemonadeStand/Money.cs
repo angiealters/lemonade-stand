@@ -9,12 +9,12 @@ namespace LemonadeStand
     class Money
     {
         //member variables
-        public double cash;
+        public decimal cash;
 
         //constructor
         public Money()
         {
-            this.cash = 20.00;
+            cash = 20.00m;
         }
 
         //methods
@@ -22,5 +22,22 @@ namespace LemonadeStand
         {
             Console.WriteLine($"You have ${cash}.");
         }
+/*        public bool SubtractFromCash(decimal amount)
+        {
+            if(cash - amount >= 0)
+            {
+                cash -= amount;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void AddToCash(decimal amount)
+        {
+            cash += amount;
+        }
+*/
     }
 }

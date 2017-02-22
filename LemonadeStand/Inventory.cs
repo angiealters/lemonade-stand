@@ -9,45 +9,42 @@ namespace LemonadeStand
     class Inventory
     {
         //member variables
-        public int cups;
-        public int lemons;
-        public int sugar;
-        public int ice;
+        public List<Cups> cups;
+        public List<Lemons> lemons;
+        public List<Sugar> sugar;
+        public List<Ice> ice;
 
         //constructor
         public Inventory()
         {
-            this.cups = 0;
-            this.lemons = 0;
-            this.sugar = 0;
-            this.ice = 0;
+            cups = new List<Cups>();
+            lemons = new List<Lemons>();
+            sugar = new List<Sugar>();
+            ice = new List<Ice>();
+
         }
 
         //methods
-        public void DisplayInventory()
-        {
-            Console.WriteLine($"You have {cups} cups, {lemons} lemons, {sugar} cups of sugar, and {ice} ice cubes.");
-        }
- /*       private void AmountOfCups()
-        {
-            cups = 0;
-            Console.WriteLine($"You have {cups} cups.");
-        }
-        private void AmountOfLemons()
-        {
-            lemons = 0;
-            Console.WriteLine($"You have {lemons} lemons.");
-        }
-        private void AmountOfSugar()
-        {
-            sugar = 0;
-            Console.WriteLine($"You have {sugar} cups of sugar.");
-        }
-        private void AmountOfIce()
-        {
-            ice = 0;
-            Console.WriteLine($"You have {ice} ice cubes.");
-        }
-   */
+        /*         public void DisplayInventory()
+                {
+                    Console.WriteLine("You have {0} cups", cups);
+                }
+              private void AmountOfCups()
+                {
+                    Console.WriteLine($"You have {cups} cups.");
+                }
+                private void AmountOfLemons()
+                {
+                    Console.WriteLine($"You have {lemons} lemons.");
+                }
+                private void AmountOfSugar()
+                {
+                    Console.WriteLine($"You have {sugar} cups of sugar.");
+                }
+                private void AmountOfIce()
+                {
+                    Console.WriteLine($"You have {ice} ice cubes.");
+                }
+        */
     }
 }

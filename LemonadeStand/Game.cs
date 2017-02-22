@@ -10,34 +10,44 @@ namespace LemonadeStand
     {
         //member variables
         Rules rules;
-        Weather forecast;
-        Day currentDay;
+        Day day;
+//        Player player;
         Store store;
-        Recipe recipe;
-    
+
 
         //constructor
         public Game()
         {
             rules = new Rules();
-            forecast = new Weather();
-            currentDay = new Day();
+            day = new Day();
+//            player = new Player();
             store = new Store();
-            recipe = new Recipe();
         }
 
         //methods
         public void PlayGame()
         {
             rules.DisplayRules();
-            forecast.WeeklyForecast();
-            while (currentDay.day < 8)
-            {
-                currentDay.DisplayDay();
-                forecast.DailyWeather();
-                store.GoToStore();
-                recipe.CreateRecipe();
-            }
+            GoToStore();
+
+ //           while (day.day < 8)
+ //           {
+ //               day.DisplayDay();
+ //               player.PlayerStart();
+
+
+ //           }
+        }
+        private void GoToStore()
+        {
+            int cups = store.GetNumberOfCups();
+            store.AddCupsToInventory(cups);
+            int lemons = store.GetNumberOfLemons();
+            store.AddLemonsToInventory(lemons);
+            int sugar = store.GetCupsOfSugar();
+            store.AddSugarToInventory(sugar);
+            int ice = store.GetNumberOfIceCubes();
+            store.AddIceToInventory(ice);
         }
     }
 }
