@@ -14,15 +14,10 @@ namespace LemonadeStand
         public Cups()
         {
             name = "Cups";
-            AmountOfCups();
             PricePerCup();
         }
 
         //methods
-        public void AmountOfCups()
-        {
-            quantity = 0;
-        }
         public void PricePerCup()
         {
             cost = .02m;

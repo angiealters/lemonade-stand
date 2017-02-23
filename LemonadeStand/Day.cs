@@ -23,7 +23,7 @@ namespace LemonadeStand
         //methods
         public void DisplayDay()
         {
-            weather.WeeklyForecast(); 
+            weather.WeeklyForecast();
             Console.WriteLine("Day {0}", day++);
             weather.DailyWeather();
         }

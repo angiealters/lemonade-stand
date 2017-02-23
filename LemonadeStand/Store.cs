@@ -12,9 +12,9 @@ namespace LemonadeStand
         Player player;
 
         //constructor
-        public Store()
+        public Store(Player player)
         {
-            player = new Player();
+            this.player = player; 
  
         }
 

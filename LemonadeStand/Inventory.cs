@@ -13,38 +13,33 @@ namespace LemonadeStand
         public List<Lemons> lemons;
         public List<Sugar> sugar;
         public List<Ice> ice;
+        Recipe recipe;
 
         //constructor
-        public Inventory()
+        public Inventory(Recipe recipe)
         {
             cups = new List<Cups>();
             lemons = new List<Lemons>();
             sugar = new List<Sugar>();
             ice = new List<Ice>();
-
+            this.recipe = recipe;
         }
 
         //methods
-        /*         public void DisplayInventory()
-                {
-                    Console.WriteLine("You have {0} cups", cups);
-                }
-              private void AmountOfCups()
-                {
-                    Console.WriteLine($"You have {cups} cups.");
-                }
-                private void AmountOfLemons()
-                {
-                    Console.WriteLine($"You have {lemons} lemons.");
-                }
-                private void AmountOfSugar()
-                {
-                    Console.WriteLine($"You have {sugar} cups of sugar.");
-                }
-                private void AmountOfIce()
-                {
-                    Console.WriteLine($"You have {ice} ice cubes.");
-                }
-        */
+        public void MakePitcherOfLemonade()
+        {
+            for (int i=0; i < recipe.lemons; i++)
+            {
+                lemons.RemoveAt(0);
+            }
+            for (int i=0; i < recipe.sugar; i++)
+            {
+                sugar.RemoveAt(0);
+            }
+            for (int i=0; i < recipe.ice; i++)
+            {
+                ice.RemoveAt(0);
+            }
+         }
     }
 }

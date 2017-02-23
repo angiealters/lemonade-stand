@@ -9,48 +9,45 @@ namespace LemonadeStand
     class Recipe
     {
         //member variables
-        int lemons;
-        int sugar;
-        int ice;
-        int price;
+        public int lemons;
+        public int sugar;
+        public int ice;
+        public int price;
 
         //constructor
         public Recipe()
         {
+
   
         }
 
         //methods
         public void CreateRecipe()
         {
-            lemons = GetAmountOfLemons();
-            sugar = GetAmountOfSugar();
-            ice = GetAmountOfIce();
-            price = GetPricePerCup();            
+            GetAmountOfLemons();
+            GetAmountOfSugar();
+            GetAmountOfIce();
+            GetPricePerCup();            
         }
-        private int GetAmountOfLemons()
+        public void GetAmountOfLemons()
         {
             Console.WriteLine("Enter the amount of lemons you would like to use per pitcher.");
-            Console.ReadLine();
-            return lemons;
+            lemons = int.Parse(Console.ReadLine());
         }
-        private int GetAmountOfSugar()
+        public void GetAmountOfSugar()
         {
             Console.WriteLine("Enter how many cups of sugar you would like to use per pitcher.");
-            Console.ReadLine();
-            return sugar;
+            sugar = int.Parse(Console.ReadLine());
         }
-        private int GetAmountOfIce()
+        public void GetAmountOfIce()
         {
-            Console.WriteLine("Enter how many ice cubes you would like to use per glass.");
-            Console.ReadLine();
-            return ice;
+            Console.WriteLine("Enter how many ice cubes you would like to use per pitcher.");
+            ice = int.Parse(Console.ReadLine());
         }
-        private int GetPricePerCup()
+        public void GetPricePerCup()
         {
             Console.WriteLine("Enter the amount you would like to charge per cup of lemonade.");
-            Console.ReadLine();
-            return price;
+            price = int.Parse(Console.ReadLine());
         }
     }
 }

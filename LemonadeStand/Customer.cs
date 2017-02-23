@@ -9,8 +9,9 @@ namespace LemonadeStand
     class Customer
     {
         //member variables
-        int temp;
-        int price;
+        //member variables
+        int temperaturePreferance;
+        decimal maxPrice;
 
         //constructor
         public Customer()
@@ -23,21 +24,21 @@ namespace LemonadeStand
         {
 
         }
-        private void CustomerPurchase()
+        public void CustomerPurchase()
         {
             Random random = new Random();
 
-            if (temp > 75)
+            if (temperaturePreferance > 75)
             {
-                price = random.Next(25, 76);
+                maxPrice = (random.Next(25, 76) / 100);
             }
-            else if (temp > 66 && temp < 74)
+            else if (temperaturePreferance > 66 && temperaturePreferance < 74)
             {
-
+                maxPrice = (random.Next(15, 51) / 100);
             }
-            else if (temp < 65)
+            else if (temperaturePreferance < 65)
             {
-
+                maxPrice = (random.Next(10, 26) / 100);
             }
         }
     }

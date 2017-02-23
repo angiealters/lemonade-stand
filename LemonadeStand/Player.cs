@@ -18,13 +18,14 @@ namespace LemonadeStand
         {
             recipe = new Recipe();
             money = new Money();
-            inventory = new Inventory();
+            inventory = new Inventory(recipe);
         }
 
         //methods
         public void PlayerStart()
         {
             recipe.CreateRecipe();
+            inventory.MakePitcherOfLemonade();
 
         }
     }

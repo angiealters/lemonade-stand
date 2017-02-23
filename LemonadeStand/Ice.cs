@@ -14,15 +14,10 @@ namespace LemonadeStand
         public Ice()
         {
             name = "Ice";
-            AmountOfIce();
             PricePerIceCube();
         }
 
         //methods
-        public void AmountOfIce()
-        {
-            quantity = 0;
-        }
         public void PricePerIceCube()
         {
             cost = .01m;

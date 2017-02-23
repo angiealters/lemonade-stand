@@ -11,26 +11,25 @@ namespace LemonadeStand
         //member variables
         int temperature;
         string weather;
-        string[] weatherConditions = { "cloudy", "sunny", "gloomy with rain", "partly cloudy"};
+        string[] weatherConditions = { "cloudy", "sunny", "gloomy with rain", "partly cloudy", "mostly sunny", "hazy"};
+        Random random = new Random();
 
 
         //constructor
 
         //methods
         public void WeeklyForecast()
-        {            
-            Console.WriteLine("Here is your weekly forecast:"
-                + "\n Sunday will be sunny, with a high of 72 degrees."
-                + "\n Monday will be partly cloudy, with a high of 65 degrees."
-                + "\n Tuesday will be cloudy, with a high of 61 degrees."
-                + "\n Wednesday will be gloomy with rain, with a high of 56 degrees."
-                + "\n Thursday will be partly cloudy, with a high of 68 degrees."
-                + "\n Friday will be cloudy, with a high of 75 degrees."
-                + "\n Saturday will be sunny, with a high of 83 degrees.");
+        {
+            for (int i=1; i < 8; i++)
+            {
+                temperature = random.Next(55, 86);
+                weather = weatherConditions[random.Next(0, weatherConditions.Length)];
+                Console.WriteLine($"Day{i} will be {weather}, with a high of {temperature} degrees.");
+            }
         }
         public void DailyWeather()
         {
-            Random random = new Random();
+ //           Random random = new Random();
             temperature = random.Next(55, 86);
             weather = weatherConditions[random.Next(0, weatherConditions.Length)];
 

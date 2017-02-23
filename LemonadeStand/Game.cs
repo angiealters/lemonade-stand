@@ -11,8 +11,9 @@ namespace LemonadeStand
         //member variables
         Rules rules;
         Day day;
-//        Player player;
+        Player player;
         Store store;
+
 
 
         //constructor
@@ -20,23 +21,25 @@ namespace LemonadeStand
         {
             rules = new Rules();
             day = new Day();
-//            player = new Player();
-            store = new Store();
+            player = new Player();
+            store = new Store(player);
         }
 
         //methods
         public void PlayGame()
         {
             rules.DisplayRules();
+            day.DisplayDay();
             GoToStore();
+            player.PlayerStart();
 
- //           while (day.day < 8)
- //           {
- //               day.DisplayDay();
- //               player.PlayerStart();
+            //           while (day.day < 8)
+            //           {
+            //               day.DisplayDay();
+            //               player.PlayerStart();
 
 
- //           }
+            //           }
         }
         private void GoToStore()
         {
