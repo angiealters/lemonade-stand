@@ -12,7 +12,9 @@ namespace LemonadeStand
         public int lemons;
         public int sugar;
         public int ice;
-        public int price;
+        public int cups;
+        public decimal price;
+
 
         //constructor
         public Recipe()
@@ -27,6 +29,7 @@ namespace LemonadeStand
             GetAmountOfLemons();
             GetAmountOfSugar();
             GetAmountOfIce();
+            AmountOfCups();
             GetPricePerCup();            
         }
         public void GetAmountOfLemons()
@@ -44,10 +47,14 @@ namespace LemonadeStand
             Console.WriteLine("Enter how many ice cubes you would like to use per pitcher.");
             ice = int.Parse(Console.ReadLine());
         }
+        public void AmountOfCups()
+        {
+            cups = 10;
+        }
         public void GetPricePerCup()
         {
             Console.WriteLine("Enter the amount you would like to charge per cup of lemonade.");
-            price = int.Parse(Console.ReadLine());
+            price = decimal.Parse(Console.ReadLine());
         }
     }
 }

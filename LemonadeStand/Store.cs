@@ -25,7 +25,7 @@ namespace LemonadeStand
             int amountOfCups = int.Parse(Console.ReadLine());
             if (player.money.cash > 0)
             {
-                player.money.cash -= amountOfCups * .02m;
+                player.money.SubtractFromCash(amountOfCups * .02m);
             }
             return amountOfCups;
         }
@@ -43,7 +43,7 @@ namespace LemonadeStand
             int amountOfLemons = int.Parse(Console.ReadLine());
             if (player.money.cash > 0)
             {
-              player.money.cash -= amountOfLemons * .06m;
+              player.money.SubtractFromCash(amountOfLemons * .06m);
             }
             return amountOfLemons;
         }
@@ -61,7 +61,7 @@ namespace LemonadeStand
             int amountOfSugar = int.Parse(Console.ReadLine());
             if (player.money.cash > 0)
             {
-                player.money.cash -= amountOfSugar * .07m;
+                player.money.SubtractFromCash(amountOfSugar * .07m);
             }
             return amountOfSugar;
         }
@@ -79,7 +79,7 @@ namespace LemonadeStand
             int amountOfIce = int.Parse(Console.ReadLine());
             if (player.money.cash > 0)
             {
-                player.money.cash -= amountOfIce * .01m;
+                player.money.SubtractFromCash(amountOfIce * .01m);
             }
             return amountOfIce;
         }

@@ -13,7 +13,7 @@ namespace LemonadeStand
         public List<Lemons> lemons;
         public List<Sugar> sugar;
         public List<Ice> ice;
-        Recipe recipe;
+//        Recipe recipe;
 
         //constructor
         public Inventory(Recipe recipe)
@@ -22,24 +22,8 @@ namespace LemonadeStand
             lemons = new List<Lemons>();
             sugar = new List<Sugar>();
             ice = new List<Ice>();
-            this.recipe = recipe;
         }
 
         //methods
-        public void MakePitcherOfLemonade()
-        {
-            for (int i=0; i < recipe.lemons; i++)
-            {
-                lemons.RemoveAt(0);
-            }
-            for (int i=0; i < recipe.sugar; i++)
-            {
-                sugar.RemoveAt(0);
-            }
-            for (int i=0; i < recipe.ice; i++)
-            {
-                ice.RemoveAt(0);
-            }
-         }
     }
 }

@@ -9,8 +9,8 @@ namespace LemonadeStand
     class Weather
     {
         //member variables
-        int temperature;
-        string weather;
+        public int temperature;
+        public string weather;
         string[] weatherConditions = { "cloudy", "sunny", "gloomy with rain", "partly cloudy", "mostly sunny", "hazy"};
         Random random = new Random();
 
@@ -29,7 +29,6 @@ namespace LemonadeStand
         }
         public void DailyWeather()
         {
- //           Random random = new Random();
             temperature = random.Next(55, 86);
             weather = weatherConditions[random.Next(0, weatherConditions.Length)];
 

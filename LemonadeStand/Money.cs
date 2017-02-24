@@ -22,22 +22,21 @@ namespace LemonadeStand
         {
             Console.WriteLine($"You have ${cash}.");
         }
-/*        public bool SubtractFromCash(decimal amount)
+        public void SubtractFromCash(decimal amount)
         {
             if(cash - amount >= 0)
             {
                 cash -= amount;
-                return true;
             }
             else
             {
-                return false;
+                Console.WriteLine("You do not have enough money.");
             }
         }
         public void AddToCash(decimal amount)
         {
             cash += amount;
         }
-*/
+
     }
 }

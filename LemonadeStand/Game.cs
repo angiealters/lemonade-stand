@@ -15,7 +15,6 @@ namespace LemonadeStand
         Store store;
 
 
-
         //constructor
         public Game()
         {
@@ -32,6 +31,8 @@ namespace LemonadeStand
             day.DisplayDay();
             GoToStore();
             player.PlayerStart();
+            day.GetCustomersMoney(player);
+
 
             //           while (day.day < 8)
             //           {

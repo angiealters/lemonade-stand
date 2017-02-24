@@ -11,7 +11,6 @@ namespace LemonadeStand
         //member variables
         public string name;
         public decimal cost;
-        public int quantity;
 
         //constructor
 
