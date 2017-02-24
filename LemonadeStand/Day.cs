@@ -36,7 +36,7 @@ namespace LemonadeStand
                 customers.Add(new Customer(random.Next(55, 86)));
             }
         }
-        public void GetCustomersMoney(Player player)
+        public void CustomerBuy(Player player)
         {
             GetCustomers();
             foreach (Customer customer in customers)
@@ -44,26 +44,32 @@ namespace LemonadeStand
                 if (customer.temperaturePreference < 80 && weather.temperature > 80)
                 {
                     player.money.AddToCash(player.recipe.price);
+                    player.SellCupOfLemonade();
                 }
                 else if (customer.temperaturePreference < 75 && weather.temperature > 75)
                 {
                     player.money.AddToCash(player.recipe.price);
+                    player.SellCupOfLemonade();
                 }
                 else if (customer.temperaturePreference < 70 && weather.temperature > 70)
                 {
                     player.money.AddToCash(player.recipe.price);
+                    player.SellCupOfLemonade();
                 }
                 else if (customer.temperaturePreference < 65 && weather.temperature > 65)
                 {
                     player.money.AddToCash(player.recipe.price);
+                    player.SellCupOfLemonade();
                 }
                 else if (customer.temperaturePreference < 60 && weather.temperature > 60)
                 {
                     player.money.AddToCash(player.recipe.price);
+                    player.SellCupOfLemonade();
                 }
                 else if (customer.temperaturePreference < 55 && weather.temperature > 55)
                 {
                     player.money.AddToCash(player.recipe.price);
+                    player.SellCupOfLemonade();
                 }
                 else
                 {

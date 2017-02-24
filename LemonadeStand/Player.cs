@@ -12,6 +12,7 @@ namespace LemonadeStand
         public Recipe recipe;
         public Money money;
         public Inventory inventory;
+        public int cupsRemaining;
 
         //constructor
         public Player()
@@ -26,6 +27,7 @@ namespace LemonadeStand
         {
             recipe.CreateRecipe();
             MakePitcherOfLemonade();
+//            SellCupOfLemonade();
 
         }
         public void MakePitcherOfLemonade()
@@ -46,11 +48,24 @@ namespace LemonadeStand
             {
                 inventory.cups.RemoveAt(0);
             }
+            cupsRemaining = 10;
         }
-        public void MakePitchers()
+        public void PourCup()
         {
-            Console.WriteLine("How many pitchers would you like to make?");
-  
+            cupsRemaining -= 1;
         }
+        public void SellCupOfLemonade()
+        {
+            if (cupsRemaining > 0)
+            {
+                PourCup();
+            }
+            else
+            {
+                MakePitcherOfLemonade();
+                PourCup();
+            }
+        }
+
     }
 }

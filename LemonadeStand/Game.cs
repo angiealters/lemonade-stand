@@ -31,16 +31,8 @@ namespace LemonadeStand
             day.DisplayDay();
             GoToStore();
             player.PlayerStart();
-            day.GetCustomersMoney(player);
+            day.CustomerBuy(player);
 
-
-            //           while (day.day < 8)
-            //           {
-            //               day.DisplayDay();
-            //               player.PlayerStart();
-
-
-            //           }
         }
         private void GoToStore()
         {

@@ -24,7 +24,7 @@ namespace LemonadeStand
             {
                 temperature = random.Next(55, 86);
                 weather = weatherConditions[random.Next(0, weatherConditions.Length)];
-                Console.WriteLine($"Day{i} will be {weather}, with a high of {temperature} degrees.");
+                Console.WriteLine($"Day {i} will be {weather}, with a high of {temperature} degrees.");
             }
         }
         public void DailyWeather()
