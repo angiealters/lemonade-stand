@@ -19,16 +19,19 @@ namespace LemonadeStand
         public Game()
         {
             rules = new Rules();
-            day = new Day();
-            player = new Player();
-            store = new Store(player);
+//            day = new Day();
+//            player = new Player();
+//            store = new Store(player);
         }
 
         //methods
         public void PlayGame()
         {
             rules.DisplayRules();
+            day = new Day();
             day.weather.WeeklyForecast();
+            player = new Player();
+            store = new Store(player);
             while (day.day < 8)
             {
                 day.DisplayDay();
