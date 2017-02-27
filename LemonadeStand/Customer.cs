@@ -10,13 +10,11 @@ namespace LemonadeStand
     {
         //member variables
         public int temperaturePreference;
-//        public decimal maxPrice;
 
         //constructor
         public Customer(int temperaturePreference)
         {
             this.temperaturePreference = temperaturePreference;
-//            this.maxPrice = maxPrice;
         }
 
         //methods

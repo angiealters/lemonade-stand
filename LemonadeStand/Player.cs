@@ -27,30 +27,37 @@ namespace LemonadeStand
         {
             recipe.CreateRecipe();
             MakePitcherOfLemonade();
-//            SellCupOfLemonade();
 
         }
-        public void MakePitcherOfLemonade()
+        private void MakePitcherOfLemonade()
         {
-            for (int i = 0; i < recipe.lemons; i++)
+            try
             {
-                inventory.lemons.RemoveAt(0);
+                for (int i = 0; i < recipe.lemons; i++)
+                {
+                    inventory.lemons.RemoveAt(0);
+                }
+                for (int i = 0; i < recipe.sugar; i++)
+                {
+                    inventory.sugar.RemoveAt(0);
+                }
+                for (int i = 0; i < recipe.ice; i++)
+                {
+                    inventory.ice.RemoveAt(0);
+                }
+                for (int i = 0; i < recipe.cups; i++)
+                {
+                    inventory.cups.RemoveAt(0);
+                }
+                cupsRemaining = 10;
             }
-            for (int i = 0; i < recipe.sugar; i++)
+            catch (Exception)
             {
-                inventory.sugar.RemoveAt(0);
+                Console.WriteLine("You sold out for the day!");
+                
             }
-            for (int i = 0; i < recipe.ice; i++)
-            {
-                inventory.ice.RemoveAt(0);
-            }
-            for (int i = 0; i < recipe.cups; i++)
-            {
-                inventory.cups.RemoveAt(0);
-            }
-            cupsRemaining = 10;
         }
-        public void PourCup()
+        private void PourCup()
         {
             cupsRemaining -= 1;
         }

@@ -18,10 +18,6 @@ namespace LemonadeStand
         }
 
         //methods
-        public void DisplayMoney()
-        {
-            Console.WriteLine($"You have ${cash}.");
-        }
         public void SubtractFromCash(decimal amount)
         {
             if(cash - amount >= 0)

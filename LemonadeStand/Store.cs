@@ -14,7 +14,7 @@ namespace LemonadeStand
         //constructor
         public Store(Player player)
         {
-            this.player = player; 
+            this.player = player;
  
         }
 

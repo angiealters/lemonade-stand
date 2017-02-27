@@ -26,35 +26,67 @@ namespace LemonadeStand
         //methods
         public void CreateRecipe()
         {
-            GetAmountOfLemons();
-            GetAmountOfSugar();
-            GetAmountOfIce();
+            SetAmountOfLemons();
+            SetAmountOfSugar();
+            SetAmountOfIce();
             AmountOfCups();
-            GetPricePerCup();            
+            SetPricePerCup();            
         }
-        public void GetAmountOfLemons()
+        private void SetAmountOfLemons()
         {
-            Console.WriteLine("Enter the amount of lemons you would like to use per pitcher.");
-            lemons = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Enter the amount of lemons you would like to use per pitcher.");
+                lemons = int.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter a valid number");
+                SetAmountOfLemons();
+            }
         }
-        public void GetAmountOfSugar()
+        private void SetAmountOfSugar()
         {
-            Console.WriteLine("Enter how many cups of sugar you would like to use per pitcher.");
-            sugar = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Enter how many cups of sugar you would like to use per pitcher.");
+                sugar = int.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter a valid number");
+                SetAmountOfSugar();
+            }
         }
-        public void GetAmountOfIce()
+        private void SetAmountOfIce()
         {
-            Console.WriteLine("Enter how many ice cubes you would like to use per pitcher.");
-            ice = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Enter how many ice cubes you would like to use per pitcher.");
+                ice = int.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter a valid number");
+                SetAmountOfIce();
+            }
         }
-        public void AmountOfCups()
+        private void AmountOfCups()
         {
             cups = 10;
         }
-        public void GetPricePerCup()
+        private void SetPricePerCup()
         {
-            Console.WriteLine("Enter the amount you would like to charge per cup of lemonade.");
-            price = decimal.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Enter the amount you would like to charge per cup of lemonade.");
+                price = decimal.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter a valid decimal number.");
+                SetPricePerCup();
+            }
         }
     }
 }

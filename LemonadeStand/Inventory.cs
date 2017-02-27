@@ -13,7 +13,6 @@ namespace LemonadeStand
         public List<Lemons> lemons;
         public List<Sugar> sugar;
         public List<Ice> ice;
-//        Recipe recipe;
 
         //constructor
         public Inventory(Recipe recipe)
